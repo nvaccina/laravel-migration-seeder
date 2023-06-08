@@ -22,8 +22,8 @@ return new class extends Migration
             $table->dateTime('arrival_time');
             $table->smallInteger('train_code');
             $table->tinyInteger('n_carriages');
-            $table->boolean('in_time');
-            $table->boolean('deleted');
+            $table->boolean('in_time')->default(0);
+            $table->boolean('deleted')->default(1);
             $table->timestamps();
         });
     }
